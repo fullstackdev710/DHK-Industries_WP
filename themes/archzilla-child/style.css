@@ -5,3 +5,14 @@
 * Template: archzilla
 * Version: 1.0.0
 */
+
+.section-title .elementor-button-text:after {
+  content: "";
+  background: url(https://dhkindustries.com.au/wp-content/uploads/2023/03/title-arrow-icon.png)
+    no-repeat;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  bottom: 3px;
+}
