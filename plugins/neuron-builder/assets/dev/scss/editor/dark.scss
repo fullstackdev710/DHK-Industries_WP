@@ -1,0 +1,13 @@
+@media (prefers-color-scheme: dark) {
+  .elementor-control-neuron_left_arrow_alignment,
+  .elementor-control-neuron_right_arrow_alignment,
+  .elementor-control-neuron_dots_alignment {
+    label {
+      border-right: 1px solid #64666a !important;
+    }
+  }
+
+  .elementor-nerd-box {
+    background-color: transparent;
+  }
+}

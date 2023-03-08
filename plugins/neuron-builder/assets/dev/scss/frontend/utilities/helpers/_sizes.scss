@@ -1,0 +1,60 @@
+.h-neuron-size {
+  &--xs {
+    &.a-neuron-button {
+      font-size: 11px;
+      padding: 12px 20px;
+    }
+
+    &.m-neuron-form__field {
+      font-size: 12px;
+      min-height: 30px;
+      padding: 4px 12px;
+    }
+  }
+
+  &--sm {
+    &.a-neuron-button {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+  }
+
+  &--md {
+    &.a-neuron-button {
+      font-size: 16px;
+      padding: 14px 30px;
+    }
+
+    &.m-neuron-form__field {
+      font-size: 16px;
+      min-height: 48px;
+      padding: 6px 16px;
+    }
+  }
+
+  &--lg {
+    &.a-neuron-button {
+      font-size: 18px;
+      padding: 18px 40px;
+    }
+
+    &.m-neuron-form__field {
+      font-size: 18px;
+      min-height: 59px;
+      padding: 7px 20px;
+    }
+  }
+
+  &--xl {
+    &.a-neuron-button {
+      font-size: 20px;
+      padding: 22px 50px;
+    }
+
+    &.m-neuron-form__field {
+      font-size: 22px;
+      min-height: 70px;
+      padding: 8px 22px;
+    }
+  }
+}

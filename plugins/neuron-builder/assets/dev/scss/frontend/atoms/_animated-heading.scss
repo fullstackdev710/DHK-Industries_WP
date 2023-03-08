@@ -1,0 +1,267 @@
+/*==========================
+=      Animated Heading    =
+==========================*/
+
+.elementor-widget-neuron-animated-heading {
+  &:not(.elementor-invisible) {
+    .a-animated-heading__text--dynamic-wrapper {
+      svg path {
+        animation: neuron-headline-dash 10s;
+      }
+    }
+  }
+}
+.a-animated-heading {
+  margin-bottom: 0;
+
+  &--highlighted {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      transform: translate(-50%, -50%);
+      overflow: visible;
+
+      path {
+        stroke: red;
+        stroke-width: 9;
+        fill: none;
+        stroke-dasharray: 1500;
+
+        &:nth-of-type(2) {
+          animation-delay: $normal-time;
+        }
+      }
+    }
+  }
+
+  &__text {
+    z-index: 1;
+    position: relative;
+  }
+
+  &--dynamic-wrapper {
+    overflow: visible;
+    text-align: inherit;
+  }
+
+  &__direction {
+    @media (min-width: $screen-md-max) {
+      &-column {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: column;
+        }
+      }
+      &-row {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      &-tablet-column {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: column;
+        }
+      }
+      &-tablet-row {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      &-mobile-column {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: column;
+        }
+      }
+      &-mobile-row {
+        .a-animated-heading__text--dynamic-wrapper {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  &--rotating {
+    &__slide-down {
+      .a-animated-heading__text {
+        &--dynamic-wrapper {
+          vertical-align: top;
+          display: inline-block;
+          transition: 0.5s all;
+          text-align: left;
+          overflow: hidden;
+        }
+
+        &--dynamic {
+          opacity: 0;
+          top: 0.2em;
+          left: 0;
+          display: inline-block;
+          position: absolute;
+
+          animation: neuron-slide-down-out 0.6s;
+
+          &.active {
+            opacity: 1;
+            top: 0;
+            position: relative;
+
+            animation: neuron-slide-down-in 0.6s;
+          }
+        }
+      }
+    }
+
+    &__typing {
+      .a-animated-heading__text--dynamic {
+        visibility: hidden;
+        opacity: 0;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.active {
+          position: relative;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        span {
+          visibility: hidden;
+          position: absolute;
+
+          &.active {
+            position: relative;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  &--animated {
+    &__line {
+      .a-animated-heading__text--dynamic-wrapper {
+        display: flex;
+
+        .a-animated-heading__text--dynamic {
+          span {
+            display: block;
+            &:not(.active) {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__word {
+      .a-animated-heading__text--dynamic-wrapper {
+        display: flex;
+        flex-direction: column;
+        .a-animated-heading__text--dynamic {
+          .a-animated-heading__text--word-cap {
+            display: inline-block;
+            &:not(.active) {
+              opacity: 0;
+            }
+
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TODO: Move them to animations
+@-webkit-keyframes neuron-slide-down-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neuron-slide-down-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes neuron-slide-down-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(120%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes neuron-slide-down-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(120%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes neuron-headline-dash {
+  0% {
+    stroke-dasharray: 0 1500;
+  }
+  15% {
+    stroke-dasharray: 1500 1500;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    stroke-dasharray: 1500 1500;
+    opacity: 0;
+  }
+  100% {
+    stroke-dasharray: 0 1500;
+    opacity: 0;
+  }
+}

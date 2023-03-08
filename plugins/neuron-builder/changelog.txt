@@ -1,0 +1,41 @@
+1.0.4 - 16/08/2021
+- Fix: Secondary Image issue on products when hover onto Add to Cart
+- Fix: Quick view issue on image height
+- Fix: Remove ALT attribute on gallery image when missing
+- Fix: Mega menu not showing when sticky is enabled
+- Fix: Second Image(Hover) in Products not showing correct in Metro Layout
+- Fix: Add to cart loader increases button height in Products and Add to Cart element
+- Fix: Filters not working with tag as filter(posts)
+- Tweak: Mega Menu CSS is moved to external instead of inline 
+- Tweak: Fixed the wishlist page from YITH
+- Tweak: Enhanced the quick view style
+- Tweak: Changes from _content_template to content_template in widgets render
+- Tweak: Searchform widget showing w3c error: input type html was closed wrong
+
+1.0.3 - 28/07/2021
+- Tweak: Changes promotional link when license is not activated in elements & dynamic content
+- Fix: Demo Importer stuck on loading for first time 
+- Fix: Issue when activating Yoast SEO plugin due composer files
+
+1.0.2 - 22/07/2021
+- New: Adds Quick View option in Products
+- New: Offset Option in Query Exclude of Products Element
+- New: Adds compatibility with Yith Wishlist Plugin in Products Element
+- Fix: Header & Footer showing in Elementor Canvas Page Template
+- Fix: License verification causes slow load on backend
+
+1.0.1. - 02/07/2021
+- Tweak: Added a filter to change the Portfolio Post Type Slug & Name `neuron/admin/post_type/portfolio`
+- Tweak: Added a filter to override image details in Gallery element  `neuron/element/gallery/image_details` 
+- Fix: Sub Menu displaying when hovering on it when animations were on in Nav Menu
+- Fix: Disable multiple calculation of masonry & metro in editor
+- Fix: Demo Importer fails to load when Envato Market Plugin is activated
+- Fix: Increased the z-index of WP admin bar because sticky header doesn't allow it to be reached
+- Fix: Filters Styling option were not showing in Products
+- Fix: Metro being reloaded when other section clicked and losing values
+- Fix: Fatal Error: Neuron\Modules\ThemeBuilder\Documents\Theme_Document::get_create_url
+- New: Keyboard Navigation Option in Carousel Settings
+- New: Reset Metro Button is added
+
+1.0.0 - 23/06/2021
+- Initial Release

@@ -1,0 +1,55 @@
+.neuron-dashboard {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05) !important;
+    margin: 0 -12px 8px !important;
+    padding: 0 12px 12px !important;
+  }
+
+  &__logo {
+    img {
+      display: block;
+      max-width: 85px;
+    }
+  }
+
+  &__create {
+    a {
+      line-height: 17px !important;
+      padding-bottom: 5px !important;
+      padding-top: 5px !important;
+    }
+  }
+
+  &__heading {
+    border-bottom: 1px solid #eee;
+    margin: 0 -12px !important;
+    padding: 6px 12px !important;
+  }
+
+  &__footer {
+    margin: 0 -12px -12px;
+    padding: 12px;
+    border-top: 1px solid #eee;
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+
+        &:not(:first-child) {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

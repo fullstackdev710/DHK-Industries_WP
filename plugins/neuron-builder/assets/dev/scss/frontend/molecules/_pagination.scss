@@ -1,0 +1,131 @@
+/*============================
+=        Neuron Pagination   =
+=============================*/
+
+.m-neuron-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--interactive {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--icon {
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .prev {
+    display: flex;
+    align-items: center;
+  }
+
+  .next {
+    display: flex;
+    align-items: center;
+
+    .m-neuron-pagination--icon {
+      > * {
+        filter: none;
+        transform: scale(-1, 1);
+      }
+    }
+  }
+
+  > * {
+    &:not(:last-child) {
+      margin-right: rem(8px);
+    }
+
+    &:not(:first-child) {
+      margin-left: rem(8px);
+    }
+  }
+
+  .page-numbers:not(button) {
+    font-size: rem(18px);
+
+    line-height: 1;
+
+    color: #333;
+
+    &.current,
+    &:hover {
+      color: #111;
+    }
+  }
+
+  // Animations
+  .page-numbers:not(.page-label) {
+    &:after {
+      content: "";
+      opacity: 0;
+      visibility: hidden;
+      background-color: #333;
+      transition: opacity $easeInOutQuad $slow-time;
+
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &--underline {
+    .page-numbers:not(.page-label) {
+      &.current,
+      &:hover {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      position: relative;
+      padding-bottom: 6px;
+    }
+  }
+
+  &--strikethrough {
+    .page-numbers:not(.page-label) {
+      &.current,
+      &:hover {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      position: relative;
+
+      &:after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &--diagonal {
+    .page-numbers:not(.page-label) {
+      &.current,
+      &:hover {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      position: relative;
+
+      &:after {
+        top: 50%;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

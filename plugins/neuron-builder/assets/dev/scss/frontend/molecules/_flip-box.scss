@@ -1,0 +1,296 @@
+/*===============================
+=             Flip Box          =
+================================*/
+
+.m-neuron-flip-box {
+  height: 280px;
+  position: relative;
+
+  &__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &--front {
+      background-color: #14bcc8;
+    }
+
+    &--back {
+      background-color: #4054b2;
+      display: block;
+
+      .m-neuron-flip-box__description {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+  }
+
+  &__icon {
+    margin-bottom: rem(20px);
+
+    .a-neuron-icon {
+      display: inline-block;
+      line-height: 1;
+      transition: all 0.3s;
+      font-size: rem(40px);
+    }
+
+    &--view-stacked {
+      .a-neuron-icon {
+        padding: 0.5em;
+        background-color: #34a7af;
+        color: #fff;
+        fill: #fff;
+      }
+    }
+
+    &--view-framed {
+      .a-neuron-icon {
+        padding: 0.5em;
+        color: #fff;
+        border: 3px solid #fff;
+      }
+    }
+
+    &--shape-circle {
+      .a-neuron-icon {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem(20px);
+    font-weight: 600;
+    margin-bottom: rem(10px);
+    color: #fff;
+  }
+
+  &__description {
+    font-size: rem(14px);
+  }
+
+  // Flipped
+  &--flipped {
+    .m-neuron-flip-box__item--front {
+      display: none !important;
+    }
+
+    .m-neuron-flip-box__item--back {
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+// Flip Effect & Directions
+.m-neuron-flip-box--effect-flip {
+  .m-neuron-flip-box {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    &__item {
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+
+      &--front {
+        transform: none;
+        z-index: 1;
+      }
+    }
+
+    &:hover {
+      .m-neuron-flip-box__item--back {
+        transform: none;
+      }
+    }
+  }
+
+  &.m-neuron-flip-box--3d {
+    .m-neuron-flip-box__overlay {
+      transform-style: preserve-3d;
+      transform: translateZ(0.1px);
+    }
+    .m-neuron-flip-box__inner {
+      transform: translateZ(90px) scale(0.91);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-right {
+    .m-neuron-flip-box__item--back {
+      transform: rotateX(0) rotateY(-180deg);
+    }
+    .m-neuron-flip-box:hover .m-neuron-flip-box__item--front {
+      transform: rotateX(0) rotateY(180deg);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-left {
+    .m-neuron-flip-box__item--back {
+      transform: rotateX(0) rotateY(180deg);
+    }
+    .m-neuron-flip-box:hover .m-neuron-flip-box__item--front {
+      transform: rotateX(0) rotateY(-180deg);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-up {
+    .m-neuron-flip-box__item--back {
+      transform: rotateX(-180deg) rotateY(0);
+    }
+    .m-neuron-flip-box:hover .m-neuron-flip-box__item--front {
+      transform: rotateX(180deg) rotateY(0);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-down {
+    .m-neuron-flip-box__item--back {
+      transform: rotateX(180deg) rotateY(0);
+    }
+    .m-neuron-flip-box:hover .m-neuron-flip-box__item--front {
+      transform: rotateX(-180deg) rotateY(0);
+    }
+  }
+}
+
+// Slide & Push Effect & Directions
+.m-neuron-flip-box--effect-slide .m-neuron-flip-box,
+.m-neuron-flip-box--effect-push .m-neuron-flip-box {
+  overflow: hidden;
+}
+
+.m-neuron-flip-box--effect-push {
+  .m-neuron-flip-box__item--front {
+    transform: none;
+  }
+
+  &.m-neuron-flip-box--direction-right
+    .m-neuron-flip-box:hover
+    .m-neuron-flip-box__item--front {
+    transform: translateX(100%) translateY(0);
+  }
+
+  &.m-neuron-flip-box--direction-left
+    .m-neuron-flip-box:hover
+    .m-neuron-flip-box__item--front {
+    transform: translateX(-100%) translateY(0);
+  }
+
+  &.m-neuron-flip-box--direction-up
+    .m-neuron-flip-box:hover
+    .m-neuron-flip-box__item--front {
+    transform: translateX(0) translateY(-100%);
+  }
+
+  &.m-neuron-flip-box--direction-down
+    .m-neuron-flip-box:hover
+    .m-neuron-flip-box__item--front {
+    transform: translateX(0) translateY(100%);
+  }
+}
+
+.m-neuron-flip-box--effect-slide,
+.m-neuron-flip-box--effect-push {
+  .m-neuron-flip-box:hover .m-neuron-flip-box__item--back {
+    transform: none;
+  }
+
+  &.m-neuron-flip-box--direction-right {
+    .m-neuron-flip-box__item--back {
+      transform: translateX(-100%) translateY(0);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-left {
+    .m-neuron-flip-box__item--back {
+      transform: translateX(100%) translateY(0);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-up {
+    .m-neuron-flip-box__item--back {
+      transform: translateX(0) translateY(100%);
+    }
+  }
+
+  &.m-neuron-flip-box--direction-down {
+    .m-neuron-flip-box__item--back {
+      transform: translateX(0) translateY(-100%);
+    }
+  }
+}
+
+// Zoom Out Effect
+.m-neuron-flip-box--effect-zoom-out {
+  .m-neuron-flip-box {
+    .m-neuron-flip-box__item--front {
+      transition: transform 0.7s, opacity 0.35s, width 0.1ms,
+        -webkit-transform 0.7s;
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+      width: 100%;
+    }
+
+    &:hover {
+      .m-neuron-flip-box__item--front {
+        width: 0;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: transform 0.8s, opacity 0.7s 0.1s, width 0.1ms 0.7s,
+          -webkit-transform 0.8s;
+      }
+    }
+  }
+}
+
+// Zoom In Effect
+.m-neuron-flip-box--effect-zoom-in {
+  .m-neuron-flip-box {
+    .m-neuron-flip-box__item--back {
+      transition: transform 0.7s, opacity 0.5s 0.2s, -webkit-transform 0.7s;
+      opacity: 0;
+      transform: scale(0.7);
+    }
+
+    &:hover {
+      .m-neuron-flip-box__item--back {
+        transition: transform 0.7s, opacity 0.5s, -webkit-transform 0.7s;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+// Fade Effect
+.m-neuron-flip-box--effect-fade {
+  .m-neuron-flip-box {
+    .m-neuron-flip-box__item--back {
+      opacity: 0;
+    }
+    &:hover {
+      .m-neuron-flip-box__item--back {
+        opacity: 1;
+      }
+    }
+  }
+}

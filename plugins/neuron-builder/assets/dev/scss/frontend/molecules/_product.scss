@@ -1,0 +1,396 @@
+/*=========================
+=        Product          =
+==========================*/
+.m-neuron-product {
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    a {
+      color: inherit;
+    }
+  }
+
+  &__thumbnail {
+    overflow: hidden;
+
+    &--link {
+      width: 100%;
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-height: none;
+      max-width: none;
+      transition: filter 0.3s, -webkit-filter 0.3s;
+    }
+  }
+
+  &__sale-flash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    position: absolute;
+    right: 20px;
+    top: 0;
+    margin-top: -20px;
+
+    font-size: rem(14px);
+    background-color: #000;
+    color: #fff;
+
+    z-index: 10;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 10px;
+
+    &--switch {
+      position: relative;
+
+      .m-neuron-product__price--inner {
+        display: block;
+        transition: transform $authenticMotion 250ms,
+          opacity $authenticMotion 250ms;
+      }
+
+      a {
+        opacity: 0;
+        display: block;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        transform: translateY(10px);
+        transition: transform $authenticMotion 250ms,
+          opacity $authenticMotion 250ms;
+
+        color: inherit;
+
+        span.loading {
+          display: none;
+        }
+
+        &.loading {
+          span {
+            display: none;
+
+            &.loading {
+              display: block;
+            }
+          }
+        }
+
+        &.added_to_cart {
+          display: none !important;
+        }
+      }
+    }
+
+    &--alignment-right {
+      .m-neuron-product__price {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &:hover {
+    // Price Switch
+    .m-neuron-product__price {
+      &--inner {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+
+      a {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    // Overlay
+    .m-neuron-product {
+      &__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__add-to-cart {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+
+      &__quick-view,
+      &__wishlist {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__rating {
+    margin-bottom: 10px;
+
+    .woocommerce-product-rating {
+      line-height: 1;
+    }
+
+    .star-rating {
+      float: none;
+      text-align: inherit;
+      margin: 0;
+      display: inline-block;
+    }
+
+    .woocommerce-review-link {
+      display: none;
+    }
+  }
+
+  &__woo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .woocommerce-result-count {
+      margin-bottom: 0;
+    }
+  }
+
+  &__permalink {
+    display: block;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $authenticMotion $fast-time,
+      visibility $authenticMotion $fast-time;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+
+    .m-neuron-product__add-to-cart {
+      opacity: 0;
+
+      position: relative;
+      z-index: 3;
+      pointer-events: all;
+      cursor: pointer;
+
+      transform: matrix(1, 0, 0, 1, 0, 20);
+      transition: transform $authenticMotion $fast-time,
+        opacity $authenticMotion $fast-time;
+    }
+
+    .m-neuron-product__quick-view {
+      position: absolute;
+      z-index: 3;
+      pointer-events: all;
+      cursor: pointer;
+
+      top: 64px;
+      right: 20px;
+
+      opacity: 0;
+
+      transition: opacity $authenticMotion $fast-time;
+
+      a {
+        background-color: #fff;
+
+        padding: 8px;
+        border-radius: 50%;
+        display: block;
+
+        svg {
+          width: 1em;
+          height: 1em;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__add-to-cart {
+    display: flex;
+    width: fit-content;
+    outline: 0;
+
+    a {
+      border: 0;
+      display: flex !important;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+
+      background-color: transparent !important;
+    }
+
+    .added_to_cart {
+      display: none !important;
+    }
+
+    .loading {
+      opacity: 1 !important;
+
+      span {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      i {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:before {
+        content: "";
+        border-radius: 100%;
+        border: 2px solid #fff;
+        border-color: inherit;
+        border-bottom-color: transparent;
+        height: 1em;
+        width: 1em;
+        background: 0 0 !important;
+        display: inline-block;
+        animation: rotate 0.75s 0s linear infinite;
+        vertical-align: middle;
+        position: absolute;
+      }
+
+      &:after {
+        display: none !important;
+      }
+    }
+
+    .added:after {
+      display: none !important;
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+
+    // Cart Alignment
+    &--h-left {
+      .m-neuron-product__add-to-cart {
+        margin-right: auto;
+        left: 0;
+      }
+    }
+
+    &--h-center {
+      .m-neuron-product__add-to-cart {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--h-right {
+      .m-neuron-product__add-to-cart {
+        margin-left: auto;
+        right: 0;
+      }
+    }
+
+    &--h-justified {
+      .m-neuron-product__add-to-cart {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    // Vertical Position
+    &--position-inside {
+      &.m-neuron-product__add-to-cart--v-top {
+        .m-neuron-product__overlay {
+          align-items: flex-start;
+        }
+      }
+
+      &.m-neuron-product__add-to-cart--v-center {
+        .m-neuron-product__overlay {
+          align-items: center;
+        }
+      }
+
+      &.m-neuron-product__add-to-cart--v-bottom {
+        .m-neuron-product__overlay {
+          align-items: flex-end;
+        }
+      }
+    }
+
+    &--position-outside {
+      &.m-neuron-product__add-to-cart--v-top {
+        .m-neuron-product__add-to-cart {
+          position: absolute;
+          top: 0;
+        }
+      }
+
+      &.m-neuron-product__add-to-cart--v-center {
+        .m-neuron-product__add-to-cart {
+          position: absolute;
+          top: 50%;
+        }
+      }
+
+      &.m-neuron-product__add-to-cart--v-bottom {
+        .m-neuron-product__add-to-cart {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.woocommerce {
+  .m-neuron-product {
+    // Add to cart issue on button loader
+    &__add-to-cart {
+      a:before {
+        margin: 0;
+      }
+    }
+  }
+}

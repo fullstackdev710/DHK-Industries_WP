@@ -1,0 +1,902 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: archzilla WordPress Theme\n"
+"POT-Creation-Date: 2022-11-30 02:58+0100\n"
+"PO-Revision-Date: 2021-06-01 16:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: https://neuronthemes.com\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
+"esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;translate_nooped_plural()\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:24
+msgid "One Response"
+msgstr ""
+
+#: comments.php:29
+#, php-format
+msgid "%1$s Response"
+msgstr ""
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:72
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:145 functions.php:150
+msgid "on"
+msgstr ""
+
+#: functions.php:208
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:209
+msgid "Widgets on this sidebar are displayed in Blog Page."
+msgstr ""
+
+#: functions.php:213
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions.php:214
+msgid "Widgets on this sidebar are displayed in Shop Pages."
+msgstr ""
+
+#: inc/demo-import.php:38
+msgid "Main Demo"
+msgstr ""
+
+#: inc/functions/neuron-functions.php:233
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:13
+msgid "Cart"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:87
+#: inc/functions/woocommerce-functions.php:97
+msgid "First Name"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:88
+#: inc/functions/woocommerce-functions.php:98
+msgid "Last Name"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:89
+#: inc/functions/woocommerce-functions.php:99
+msgid "Company name"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:90
+msgid "Country / Region"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:91
+msgid "Town / City"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:92
+msgid "County"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:93
+msgid "Postcode"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:94
+msgid "Phone"
+msgstr ""
+
+#: inc/functions/woocommerce-functions.php:95
+msgid "Email address"
+msgstr ""
+
+#: inc/plugins.php:20
+msgid "Elementor"
+msgstr ""
+
+#: inc/plugins.php:36
+msgid "Neuron Builder"
+msgstr ""
+
+#: inc/plugins.php:45
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/plugins.php:61
+msgid "Revolution Slider"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:335 inc/wizard/wizard-config.php:54
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:393
+#: inc/tgm/class-tgm-plugin-activation.php:912
+#: inc/tgm/class-tgm-plugin-activation.php:2618
+#: inc/tgm/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:394
+#: inc/tgm/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:395
+#: inc/tgm/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1019
+#: inc/tgm/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1206
+#: inc/tgm/class-tgm-plugin-activation.php:3033
+msgid "and"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2358 inc/wizard/class-wizard.php:740
+msgid "Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2361 inc/wizard/class-wizard.php:643
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2427
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2473
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2477
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2481
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2567
+msgid "unknown"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2802 inc/wizard/wizard-config.php:35
+#: inc/wizard/wizard-config.php:36 inc/wizard/wizard-config.php:37
+msgid "Install"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s done."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:320
+msgid "Something went wrong. Please refresh the page and try again!"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:486
+msgid "Site Identity"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:494
+msgid "Installation"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:501
+msgid "License"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:627
+msgid "My WordPress Site Title"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:631
+msgid "My WordPress Site Tagline (Optional)"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:644
+msgid "rec"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:741
+msgid "req"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:1068
+msgid "Activating"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:1084
+msgid "Updating"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:1100 inc/wizard/class-wizard.php:1109
+msgid "Installing"
+msgstr ""
+
+#: inc/wizard/class-wizard.php:1116
+msgid "Success"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:25
+msgid "Theme Setup"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:28
+#, php-format
+msgid "%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:29
+msgid "Skip setup details"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:31
+msgid "Skip"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:32
+msgid "Next"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:33
+msgid "Start"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:34
+msgid "Cancel"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:38
+msgid "Import"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:41
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:42
+msgid "Hi. Welcome back"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:43
+msgid ""
+"This wizard will set up your theme, install plugins. It is optional & should "
+"take only a few minutes."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:44
+msgid ""
+"You may have already run this theme setup wizard. If you would like to "
+"proceed anyway, click on the \"Start\" button below."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:46
+msgid "Welcome to Neuron Wizard"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:47
+msgid "You're good to go!"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:48
+msgid ""
+"Let's build & activate a child theme so you may easily make theme changes."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:49
+msgid ""
+"Your child theme has already been installed and is now activated, if it "
+"wasn't already."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:50
+msgid "Learn about child themes"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:51
+msgid ""
+"Awesome. Your child theme has already been installed and is now activated."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:52
+msgid "Awesome. Your child theme has been created and is now activated."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:55
+msgid "You're up to speed!"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:56
+msgid ""
+"Let's install some essential WordPress plugins to get your site up to speed."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:57
+msgid ""
+"The required WordPress plugins are all installed and up to date. Press \"Next"
+"\" to continue the setup wizard."
+msgstr ""
+
+#: inc/wizard/wizard-config.php:58
+msgid "Advanced"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:60
+msgid "All done. Have Fun!"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:63
+msgid "Your theme has been all set up. Enjoy your new theme by "
+msgstr ""
+
+#: inc/wizard/wizard-config.php:64
+msgid "Extras"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:65
+msgid "Get Started"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:66
+msgid "Get Theme Support"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:67
+msgid "Facebook Community"
+msgstr ""
+
+#: inc/wizard/wizard-config.php:68
+msgid "Youtube Tutorials"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs-parser/index.js:367
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:428
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:442
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:495
+#: node_modules/yargs/node_modules/yargs-parser/index.js:306
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs-parser/index.js:541
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:634
+#: node_modules/yargs/node_modules/yargs-parser/index.js:454
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:92
+msgid "Positionals:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:192
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:194
+msgid "command"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:203
+#: node_modules/yargs/lib/usage.js:169
+msgid "Commands:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:223
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:458
+#: node_modules/yargs/lib/usage.js:177 node_modules/yargs/lib/usage.js:407
+msgid "default:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:225
+#: node_modules/yargs/lib/usage.js:179
+msgid "aliases:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:288
+#: node_modules/yargs/lib/usage.js:241
+msgid "boolean"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:289
+#: node_modules/yargs/lib/usage.js:242
+msgid "count"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:290
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:291
+#: node_modules/yargs/lib/usage.js:243 node_modules/yargs/lib/usage.js:244
+msgid "string"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:292
+#: node_modules/yargs/lib/usage.js:245
+msgid "array"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:293
+#: node_modules/yargs/lib/usage.js:246
+msgid "number"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:297
+#: node_modules/yargs/lib/usage.js:250
+msgid "required"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:298
+#: node_modules/yargs/lib/usage.js:251
+msgid "choices:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:317
+#: node_modules/yargs/lib/usage.js:270
+msgid "Examples:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/usage.js:436
+#: node_modules/yargs/lib/usage.js:385
+msgid "generated-value"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:29
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:52
+#: node_modules/yargs/lib/validation.js:27
+#: node_modules/yargs/lib/validation.js:50
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:40
+#: node_modules/yargs/lib/validation.js:38
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:147
+#: node_modules/yargs/lib/validation.js:186
+msgid "Invalid values:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:150
+#: node_modules/yargs/lib/validation.js:189
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:180
+#: node_modules/yargs/lib/validation.js:219
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:256
+#: node_modules/yargs/lib/validation.js:284
+msgid "Implications failed:"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:295
+#: node_modules/yargs/lib/validation.js:314
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: node_modules/sass-graph/node_modules/yargs/lib/validation.js:316
+#: node_modules/yargs/lib/validation.js:333
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:419
+#, javascript-format
+msgid "Argument unexpected for: %s"
+msgstr ""
+
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:963
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.array."
+msgstr ""
+
+#: node_modules/yargs-parser/build/lib/yargs-parser.js:967
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.narg."
+msgstr ""
+
+#: search.php:41
+msgid "Search for: "
+msgstr ""
+
+#: searchform.php:9
+msgid "Search..."
+msgstr ""
+
+#: template-parts/content-archive.php:42
+msgid "Home"
+msgstr ""
+
+#: template-parts/content-blog.php:52
+msgid "Read More"
+msgstr ""
+
+#: template-parts/content-none.php:13 template-parts/content-search.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid ""
+"The post you were looking for couldn't be found. The post could be removed "
+"or you misspelled the word while searching for it."
+msgstr ""
+
+#: template-parts/content-page.php:15 template-parts/content-single.php:51
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:15 template-parts/content-single.php:51
+msgid "&raquo;"
+msgstr ""
+
+#: template-parts/content-page.php:15 template-parts/content-single.php:51
+msgid "&laquo;"
+msgstr ""
+
+#: template-parts/content-search.php:14
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-single.php:35
+msgid "Categories:"
+msgstr ""
+
+#: template-parts/content-single.php:44
+msgid "Tags:"
+msgstr ""
+
+#: template-parts/footer.php:11
+msgid "All rights reserved."
+msgstr ""
+
+#: template-parts/overlay-search.php:5
+msgid "Hit enter to search or ESC to close"
+msgstr ""

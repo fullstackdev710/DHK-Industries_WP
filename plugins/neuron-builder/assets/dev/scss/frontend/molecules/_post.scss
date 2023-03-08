@@ -1,0 +1,350 @@
+/*=========================
+=           Post          =
+==========================*/
+
+.elementor-element {
+  .m-neuron-post {
+    &__thumbnail {
+      &--link {
+        width: 100%;
+        position: relative;
+
+        padding-bottom: calc(0.63 * 100%);
+        overflow: hidden;
+
+        img {
+          transition: all 0.3s ease-in-out;
+
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all 0.3s ease-in-out;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &--secondary {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: absolute;
+
+        transition: transform 0.4s cubic-bezier(0.2, 0.75, 0.5, 1),
+          opacity 0.4s cubic-bezier(0.2, 0.75, 0.5, 1);
+      }
+
+      &--zoom-in {
+        overflow: hidden;
+
+        img {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    &__meta-data {
+      display: inline-block;
+    }
+
+    &__title,
+    &__read-more {
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        letter-spacing: inherit;
+        font-size: inherit;
+      }
+    }
+
+    &:not(.m-neuron-product) {
+      &__inner {
+        overflow: hidden;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      transition: 0.3s all;
+
+      // Second Image Display
+      &:hover {
+        .m-neuron-post__thumbnail--secondary {
+          opacity: 1;
+
+          transform: scale(1.05);
+        }
+      }
+
+      // Card Style
+      &--card {
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 3px;
+        border: 0 solid #818a91;
+        transition: all 0.25s;
+
+        .m-neuron-post {
+          &__badge {
+            position: absolute;
+            top: 0;
+            margin: 20px;
+
+            background-color: #00a6e7;
+            color: #fff;
+            font-size: rem(12px);
+            padding: 0.6em 1.2em;
+            line-height: 1;
+            font-weight: 400;
+            border-radius: 20px;
+            text-transform: uppercase;
+          }
+
+          &__avatar {
+            position: relative;
+            padding: 0 30px;
+            width: 100%;
+            top: -25px;
+            height: 0;
+            pointer-events: none;
+
+            img {
+              border-radius: 50%;
+              width: 60px;
+              pointer-events: all;
+              transform: translateY(-50%);
+            }
+          }
+
+          &__read-more {
+            margin-bottom: 20px;
+            font-size: rem(14px);
+            display: inline-block;
+            text-transform: uppercase;
+          }
+
+          &__text {
+            padding: 0 30px;
+            margin-bottom: 0;
+            margin-top: 20px;
+          }
+
+          &__meta-data {
+            padding: 15px 30px;
+            margin-bottom: 0;
+            border-top: 1px solid #eaeaea;
+          }
+        }
+      }
+    }
+  }
+
+  .m-neuron-pagination {
+    button {
+      display: inline-block;
+    }
+  }
+
+  // Card Shadow
+  &.neuron-card-shadow-yes {
+    .m-neuron-post {
+      &.swiper-slide {
+        overflow: initial;
+      }
+
+      &__inner {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  // Item Ratio
+  .l-neuron-grid {
+    .m-neuron-post__thumbnail {
+      line-height: 0;
+      width: 100%;
+    }
+
+    &:not(.l-neuron-grid--masonry),
+    &:not(.l-neuron-grid--metro) {
+      .m-neuron-post__inner--card {
+        .m-neuron-post__meta-data {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
+
+// Prefix Classes
+.m-neuron-posts {
+  // Layout
+  &--layout-masonry,
+  &--layout-metro {
+    .m-neuron-post__thumbnail {
+      &--link {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Thumbnail Options
+  &--thumbnail-top {
+    .m-neuron-post__inner {
+      flex-wrap: wrap;
+
+      .m-neuron-post__thumbnail--link {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--thumbnail-left {
+    .m-neuron-post__inner {
+      flex-direction: unset;
+
+      .m-neuron-post__thumbnail--link {
+        flex-shrink: 0;
+        order: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--thumbnail-right {
+    .m-neuron-post__inner {
+      flex-direction: unset;
+      .m-neuron-post__thumbnail--link {
+        flex-shrink: 0;
+        order: 5;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &--thumbnail-none {
+    .m-neuron-post__thumbnail--link {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .m-neuron-posts-tablet {
+    // Thumbnail Options
+    &--thumbnail-top {
+      .m-neuron-post__inner {
+        flex-wrap: wrap;
+      }
+    }
+
+    &--thumbnail-left {
+      .m-neuron-post__inner {
+        flex-direction: unset;
+        .m-neuron-post__thumbnail--link {
+          flex-shrink: 0;
+          order: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &--thumbnail-right {
+      .m-neuron-post__inner {
+        flex-direction: unset;
+        .m-neuron-post__thumbnail--link {
+          flex-shrink: 0;
+          order: 5;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &--thumbnail-none {
+      .m-neuron-post__thumbnail--link {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .m-neuron-posts-mobile {
+    // Thumbnail Options
+    &--thumbnail-top {
+      .m-neuron-post__inner {
+        flex-wrap: wrap;
+      }
+    }
+
+    &--thumbnail-left {
+      .m-neuron-post__inner {
+        flex-direction: unset;
+        .m-neuron-post__thumbnail--link {
+          flex-shrink: 0;
+          order: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &--thumbnail-right {
+      .m-neuron-post__inner {
+        flex-direction: unset;
+        .m-neuron-post__thumbnail--link {
+          flex-shrink: 0;
+          order: 5;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &--thumbnail-none {
+      .m-neuron-post__thumbnail--link {
+        display: none;
+      }
+    }
+  }
+}
+
+// Read More
+.m-neuron-post__read-more {
+  &--icon-before {
+    .m-neuron-post__read-more a {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      text-align: left;
+      width: fit-content;
+    }
+  }
+}
+
+// Load More
+#load-more-posts {
+  outline: none;
+}

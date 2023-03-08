@@ -1,0 +1,39 @@
+/*============================
+=        Blockquote          =
+=============================*/
+
+.m-neuron-filters {
+  margin-bottom: 16px;
+  color: #666;
+  visibility: visible;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      transition: color $authenticMotion $super-fast-time;
+
+      cursor: pointer;
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &--vertical {
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+.l-neuron-grid__item {
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+}

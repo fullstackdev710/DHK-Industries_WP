@@ -1,0 +1,12 @@
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1440px,
+  xxl: 1600px,
+);
+
+$screen-sm-max: map_get($breakpoints, md) - 1;
+$screen-md-max: map_get($breakpoints, lg) - 1;
+
+@import "frontend";

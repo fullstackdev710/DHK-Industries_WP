@@ -1,0 +1,113 @@
+#neuron-publish {
+  height: 100%;
+  display: flex;
+
+  &__modal {
+    .dialog-buttons-wrapper {
+      display: flex;
+    }
+
+    .dialog-message {
+      padding: 0 !important;
+    }
+
+    .dialog-publish {
+      transition-property: opacity, -webkit-box-shadow;
+      transition-property: box-shadow, opacity;
+      transition-property: box-shadow, opacity, -webkit-box-shadow;
+    }
+
+    .neuron-popup__display-settings {
+      .elementor-control-input-wrapper {
+        width: 80px;
+        max-width: 100%;
+      }
+
+      .elementor-control-type-slider {
+        .elementor-control-input-wrapper {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+#neuron-publish__modal {
+  .dialog-publish:not(.elementor-button-success) {
+    text-decoration: underline;
+    color: #a4afb7;
+    font-weight: normal;
+    width: 110px;
+    background-color: transparent;
+  }
+
+  .dialog-publish:not(.elementor-button-success):hover {
+    color: #6d7882;
+  }
+}
+
+#neuron-publish {
+  &__tabs {
+    padding-top: 30px;
+    flex-shrink: 0;
+    width: 25%;
+    background-color: hsla(0, 0%, 100%, 0.3);
+  }
+
+  &__screen {
+    flex-grow: 1;
+    box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (max-width: 1439px) {
+  #neuron-publish__tabs {
+    width: 28%;
+  }
+}
+#neuron-publish__screen {
+  overflow: auto;
+  padding: 50px;
+}
+
+.neuron-publish__tab {
+  display: flex;
+  align-items: center;
+
+  padding: 15px 0 15px 45px;
+  font-size: 14px;
+  color: #6d7882;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+
+  &.elementor-active {
+    background-color: #fff;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 5px;
+      background-color: #71d7f7;
+    }
+  }
+
+  &__image {
+    width: 20px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    padding-left: 15px;
+  }
+}

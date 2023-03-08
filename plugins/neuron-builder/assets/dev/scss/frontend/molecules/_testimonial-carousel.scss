@@ -1,0 +1,189 @@
+/*=========================================
+=        Testimonial Carousel Base        =
+==========================================*/
+
+.m-neuron-testimonial {
+  text-align: center;
+  animation-duration: 0.45s;
+
+  &__content {
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: auto;
+    height: 50px;
+
+    img {
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__image + &__cite {
+    margin-left: 20px;
+  }
+
+  &__cite {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.l-neuron-testimonial {
+  // Layouts
+  &--image-stacked {
+    .m-neuron-testimonial {
+      &__footer {
+        flex-direction: column;
+      }
+
+      &__image {
+        margin-bottom: 10px;
+      }
+
+      &__cite {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &--image-above {
+    .m-neuron-testimonial {
+      &__image {
+        margin: 0 auto 15px;
+      }
+
+      &__cite {
+        text-align: center;
+      }
+    }
+  }
+
+  &--image-left,
+  &--image-right {
+    .m-neuron-testimonial {
+      display: flex;
+      align-items: start;
+
+      &__image {
+        margin-right: 20px;
+      }
+
+      &__text {
+        margin-bottom: 15px;
+      }
+
+      &__cite {
+        text-align: center;
+      }
+
+      &__content {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--image-right {
+    .m-neuron-testimonial {
+      &__footer {
+        order: 3;
+      }
+
+      &__image {
+        margin-right: 0;
+        margin-left: 20px !important;
+      }
+    }
+  }
+
+  // Alignment
+  &--alignment {
+    &__left {
+      .m-neuron-testimonial {
+        text-align: left;
+
+        &__cite {
+          text-align: left;
+        }
+
+        &__footer {
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        &__image {
+          margin-left: unset;
+        }
+      }
+    }
+
+    &__center {
+      .m-neuron-testimonial {
+        text-align: center;
+
+        &__cite,
+        &__name,
+        &__title {
+          text-align: center;
+        }
+      }
+      .m-neuron-testimonial__image + .m-neuron-testimonial__cite {
+        text-align: left !important;
+      }
+    }
+
+    &__right {
+      .m-neuron-testimonial {
+        text-align: right;
+
+        &__cite {
+          text-align: right;
+        }
+
+        &__footer {
+          justify-content: flex-end;
+          align-items: flex-end;
+        }
+
+        &__image {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.elementor-widget-neuron-testimonial-carousel {
+  &.elementor-invisible {
+    visibility: visible;
+  }
+
+  .swiper-slide {
+    padding: 20px;
+  }
+
+  .swiper-container {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

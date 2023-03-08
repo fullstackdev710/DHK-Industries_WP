@@ -1,0 +1,31 @@
+body {
+  &:not(.woocommerce-cart) {
+    .quantity {
+      position: relative;
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .quantity-nav {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        line-height: 1;
+
+        &--up {
+          left: auto;
+          right: 10px;
+        }
+      }
+    }
+  }
+}

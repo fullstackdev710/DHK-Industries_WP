@@ -1,0 +1,138 @@
+.o-post-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+    line-height: 34px;
+
+    + &__text {
+      margin-bottom: 8px;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1;
+
+    a {
+      display: block;
+    }
+
+    &--next {
+      i,
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--no-label {
+    .o-post-navigation__link {
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      &--next {
+        a {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .o-post-navigation__icon {
+      margin-bottom: 0;
+    }
+  }
+
+  // Alignment
+  &__align-left {
+    .o-post-navigation {
+      justify-content: flex-start;
+    }
+  }
+
+  &__align-center {
+    .o-post-navigation {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__align-right {
+    .o-post-navigation {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    .o-post-navigation__icon {
+      margin-bottom: 0;
+    }
+  }
+
+  // Alignment
+  &__align-left {
+    .o-post-navigation {
+      justify-content: flex-start;
+
+      &__icon {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__align-center {
+    .o-post-navigation {
+      justify-content: center;
+
+      &__icon {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__align-right {
+    .o-post-navigation {
+      justify-content: flex-end;
+
+      &__icon {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__hover-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: transform $authenticMotion $fast-time,
+      opacity $authenticMotion $fast-time;
+
+    transform: translateY(15px);
+    opacity: 0;
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

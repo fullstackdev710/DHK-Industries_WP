@@ -1,0 +1,335 @@
+/*================================
+=        Neuron Swiper Slider    =
+=================================*/
+
+.neuron-swiper {
+  .swiper-slide {
+    overflow: hidden;
+
+    &--background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &--background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &--inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 50px;
+      margin: auto;
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+
+      .neuron-slide-heading {
+        font-size: rem(32px);
+      }
+
+      .neuron-slide-description {
+        font-size: rem(18px);
+      }
+
+      .neuron-slide-button {
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 12px 24px;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      *:not(:last-of-type) {
+        margin-bottom: rem(16px);
+      }
+    }
+  }
+
+  &--prevent-flickr {
+    display: none;
+  }
+
+  .swiper-pagination {
+    span.swiper-pagination-bullet {
+      // border-style: solid;
+      opacity: 1;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .neuron-swiper-button {
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    outline: 0;
+
+    .neuron-icon {
+      i,
+      svg {
+        display: block;
+      }
+
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+
+    &--hidden {
+      position: absolute;
+      top: -10000em;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    &--next {
+      > * {
+        filter: none;
+        transform: scale(-1, 1);
+      }
+    }
+  }
+
+  .neuron-swiper-quote {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #fff;
+
+    margin-top: -15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    line-height: 50px;
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .swiper-scrollbar {
+    height: 2px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+
+    .swiper-scrollbar-drag {
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: $screen-sm-max - 1) {
+    &--mobile-overflow {
+      &-visible {
+        .swiper-container {
+          overflow: visible;
+        }
+      }
+
+      &-visible-right {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(-100vw -100vw -100vw 0);
+        }
+      }
+
+      &-visible-left {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(0vw 0vw 0vw -100vw);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-max) and (max-width: $screen-md-max - 1) {
+    &--tablet-overflow {
+      &-visible {
+        .swiper-container {
+          overflow: visible;
+        }
+      }
+
+      &-visible-right {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(-100vw -100vw -100vw 0);
+        }
+      }
+
+      &-visible-left {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(0vw 0vw 0vw -100vw);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-max) {
+    &--overflow {
+      &-visible {
+        .swiper-container {
+          overflow: visible;
+        }
+      }
+
+      &-visible-right {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(-100vw -100vw -100vw 0);
+        }
+      }
+
+      &-visible-left {
+        .swiper-container {
+          overflow: visible;
+          clip-path: inset(0vw 0vw 0vw -100vw);
+        }
+      }
+    }
+  }
+}
+
+// Dots
+.neuron-dots {
+  &--style {
+    &__bullets {
+      .neuron-swiper-dots {
+        transition: none !important;
+
+        font-size: 8px;
+
+        .swiper-pagination-bullet {
+          width: 1em;
+          height: 1em;
+
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    &__numbers {
+      .swiper-pagination-bullet {
+        background: transparent;
+        height: auto;
+        width: auto;
+      }
+    }
+
+    &__progressbar {
+      .swiper-pagination {
+        height: 4px;
+        opacity: 1;
+        width: 100%;
+        left: 0 !important;
+      }
+    }
+
+    &__fraction {
+      .neuron-swiper-dots {
+        bottom: auto;
+        width: fit-content;
+      }
+    }
+  }
+
+  &--bar-position {
+    &__bottom {
+      .swiper-pagination {
+        bottom: auto !important;
+        top: 100% !important;
+        transform: translateY(-100%) !important;
+      }
+    }
+
+    &__top {
+      .swiper-pagination,
+      .swiper-scrollbar {
+        top: auto !important;
+        bottom: 100% !important;
+        transform: translateY(-100%) !important;
+        left: 0;
+      }
+
+      .swiper-scrollbar {
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+
+  // Orientation
+  &--orientation {
+    &__vertical {
+      .neuron-swiper-dots {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  // Animation
+  &--animation {
+    &__scale {
+      .swiper-pagination-bullet {
+        transition: all $easeInOutQuad $fast-time;
+        &:hover,
+        &.swiper-pagination-bullet-active {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+}
+
+body:not(.elementor-editor-active) {
+  .swiper-slide {
+    .neuron-slide-content {
+      .neuron-slide-animation {
+        opacity: 0;
+        visibility: hidden;
+        animation-duration: 0.6s;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

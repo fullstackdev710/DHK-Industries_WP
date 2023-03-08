@@ -1,0 +1,132 @@
+/*============================
+=        Blockquote          =
+=============================*/
+
+.elementor-widget-neuron-blockquote {
+  .m-neuron-blockquote {
+    margin: 0;
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: rem(10px);
+    }
+
+    &__author {
+      font-weight: 600;
+    }
+
+    &__button {
+      padding: 0.7em 1.2em;
+      border-radius: 100em;
+      background-color: #1da1f2;
+      color: #fff;
+      font-size: rem(15px);
+    }
+  }
+}
+
+// Skins & Alignment
+.m-neuron-blockquote {
+  &--skin-border {
+    .m-neuron-blockquote {
+      border-left-color: #999;
+      border-left-width: 5px;
+    }
+  }
+
+  &--skin-boxed {
+    .m-neuron-blockquote {
+      background: #e6e9ec;
+      padding: rem(30px);
+      border-left: none;
+    }
+  }
+
+  &--skin-quotation {
+    .m-neuron-blockquote {
+      padding-left: 0;
+      border-left: none;
+
+      &__content {
+        margin-top: 15px;
+      }
+
+      &:before {
+        content: "“";
+        font-size: 100px;
+        color: #e6e9ec;
+        font-family: Times New Roman, Times, serif;
+        font-weight: 900;
+        line-height: 1;
+        display: block;
+        height: 0.6em;
+      }
+    }
+  }
+
+  &--skin-clean {
+    .m-neuron-blockquote {
+      padding: 0;
+      border-left: none;
+    }
+  }
+
+  &--alignment-center {
+    .m-neuron-blockquote {
+      &:before {
+        text-align: center;
+      }
+
+      &__content {
+        text-align: center;
+      }
+
+      &__footer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &--alignment-right {
+    .m-neuron-blockquote {
+      &:before {
+        text-align: right;
+      }
+
+      &__content {
+        text-align: right;
+      }
+
+      &__footer {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &--button-skin-bubble {
+    .m-neuron-blockquote__button {
+      position: relative;
+      &:before {
+        content: "";
+        border: 0.5em solid transparent;
+        border-right-color: #1da1f2;
+        position: absolute;
+        left: -0.8em;
+        top: 50%;
+        transform: translateY(-50%) scaleY(0.65);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &--button-skin-link {
+    .m-neuron-blockquote__button {
+      background-color: transparent;
+      color: #1da1f2;
+      padding: 0;
+    }
+  }
+}

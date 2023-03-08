@@ -1,0 +1,48 @@
+.elementor-tabs {
+  &--animation-slideUp {
+    .elementor-tab {
+      &-content {
+        animation-name: slideUp;
+        animation-timing-function: $authenticMotion;
+        animation-duration: calc(#{$fast-time}) !important;
+      }
+
+      &-title {
+        transition: calc(#{$fast-time}) all;
+      }
+    }
+  }
+}
+
+.elementor-toggle {
+  .elementor-tab {
+    &-title,
+    &-content {
+      border: none;
+    }
+  }
+}
+
+.neuron-sticky {
+  &:not(.neuron-sticky--active) {
+    .m-neuron-nav-menu .menu-item > a:after {
+      display: none !important;
+    }
+
+    .m-neuron-nav-menu--mega-menu {
+      min-width: 80vw;
+    }
+  }
+}
+
+.elementor-widget-icon {
+  .elementor-icon-wrapper {
+    font-size: 0;
+  }
+}
+
+.elementor-widget-text-editor {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

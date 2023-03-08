@@ -1,0 +1,52 @@
+.elementor-nerd-box {
+  background-color: #fff;
+}
+
+#elementor-global-widget-locked-tools {
+  background-color: #fff;
+  margin-top: 15px;
+  padding: 0 20px;
+
+  .elementor-global-widget-locked-tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    &:first-child {
+      border-bottom: 1px solid #e6e9ec;
+    }
+
+    button {
+      width: 80px;
+      line-height: 30px;
+    }
+
+    #elementor-global-widget-locked-edit {
+      button {
+        background-color: #39b54a;
+      }
+    }
+
+    #elementor-global-widget-locked-unlink {
+      button {
+        background-color: #d30c5c;
+      }
+    }
+  }
+}
+
+#elementor-global-templates {
+  .elementor-element {
+    position: relative;
+    &:before {
+      position: absolute;
+      font-family: eicons;
+      content: "\e91f";
+      top: 5px;
+      left: 5px;
+      color: #fcb92c;
+      font-size: 10px;
+    }
+  }
+}

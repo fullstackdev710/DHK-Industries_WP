@@ -1,0 +1,87 @@
+/*=========================
+=        Post Info        =
+==========================*/
+
+.m-neuron-post-info {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  li {
+    margin-bottom: 0;
+    font-size: 18px;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    a {
+      color: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: -moz-max-content;
+    }
+
+    .elementor-icon-list-icon + .m-neuron-icon-list-text {
+      padding-left: 10px;
+    }
+  }
+
+  i,
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
+  &.m-neuron-inline-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      &:after {
+        height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -8px;
+        bottom: auto;
+        left: auto;
+      }
+    }
+  }
+
+  &__terms-list {
+    display: flex;
+
+    @-moz-document url-prefix() {
+      display: -webkit-box;
+    }
+
+    a:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.elementor-widget-neuron-post-info {
+  &.m-neuron-align-center {
+    display: flex;
+    justify-content: center;
+  }
+  &.m-neuron-align-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

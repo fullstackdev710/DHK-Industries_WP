@@ -1,0 +1,57 @@
+//=============================
+//        Colors Mixins
+//=============================
+
+@mixin link-shadow-color($link-shadow-color: $theme-color) {
+  box-shadow: inset 0 0 0 rgba($link-shadow-color, 0),
+    0 1px 0 rgba($link-shadow-color, 1);
+}
+
+// @mixin is-child($selector) {
+//   #{$selector} {
+//     @content;
+//   }
+// }
+
+@mixin social-media(
+  $name: "facebook",
+  $color: "#3b5998",
+  $unit: "background-color",
+  $suffix: "",
+  $child: false
+) {
+  &--#{$name} {
+    @if ($child) {
+      .#{$child} {
+        #{$unit}: #{$color} #{$suffix};
+      }
+    } @else {
+      #{$unit}: #{$color} #{$suffix};
+    }
+  }
+}
+
+@mixin social-media-color(
+  $unit: "background-color",
+  $suffix: "",
+  $child: false
+) {
+  @include social-media("facebook", "#3b5998", $unit, $suffix, $child);
+  @include social-media("twitter", "#55acee", $unit, $suffix, $child);
+  @include social-media("linkedin", "#0077b5", $unit, $suffix, $child);
+  @include social-media("pinterest", "#bd081c", $unit, $suffix, $child);
+  @include social-media("reddit", "#ff4500", $unit, $suffix, $child);
+  @include social-media("vk", "#45668e", $unit, $suffix, $child);
+  @include social-media("odnoklassniki", "#ed812b", $unit, $suffix, $child);
+  @include social-media("tumblr", "#35465c", $unit, $suffix, $child);
+  @include social-media("delicious", "#3399ff", $unit, $suffix, $child);
+  @include social-media("digg", "#005be2", $unit, $suffix, $child);
+  @include social-media("skype", "#00aff0", $unit, $suffix, $child);
+  @include social-media("stumbleupon", "#eb4924", $unit, $suffix, $child);
+  @include social-media("telegram", "#0088cc", $unit, $suffix, $child);
+  @include social-media("pocket", "#ef4056", $unit, $suffix, $child);
+  @include social-media("xing", "#026466", $unit, $suffix, $child);
+  @include social-media("whatsapp", "#25d366", $unit, $suffix, $child);
+  @include social-media("email", "#ea4335", $unit, $suffix, $child);
+  @include social-media("print", "#333", $unit, $suffix, $child);
+}

@@ -1,0 +1,104 @@
+/*=========================
+=        Hamburger        =
+=========================*/
+
+.a-hamburger {
+  box-shadow: none !important;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+
+  .a-hamburger__line--hide {
+    left: -35px;
+    margin-top: -2px;
+  }
+
+  &:hover {
+    .a-hamburger__line {
+      &::before {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      .a-hamburger__line__inner {
+        &::before,
+        &::after {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    .a-hamburger__line--hide {
+      &::before {
+        background-color: $theme-color;
+        transform: translateX(118%);
+        opacity: 1;
+      }
+
+      .a-hamburger__line__inner {
+        &::before,
+        &::after {
+          background-color: $theme-color;
+          transform: translateX(118%);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .a-hamburger__line {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 10px;
+    height: 2px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-color: $dark;
+      width: 28px;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      transition: transform $easeInOutQuad $slow-time,
+        opacity $easeInOutQuad $slow-time,
+        background-color $easeInOutQuad $fast-time;
+      transition-delay: 0.1s;
+    }
+
+    .a-hamburger__line__inner {
+      display: block;
+      background-color: transparent;
+      width: 28px;
+      height: 2px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        background-color: $dark;
+        width: 28px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        transition: transform $easeInOutQuad $slow-time,
+          opacity $easeInOutQuad $slow-time,
+          background-color $easeInOutQuad $fast-time;
+      }
+
+      &::before {
+        top: 8px;
+        transition-delay: 0.15s;
+      }
+
+      &::after {
+        top: -8px;
+      }
+    }
+  }
+}

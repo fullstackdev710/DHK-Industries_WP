@@ -1,0 +1,31 @@
+.a-scrolling-text {
+  overflow: hidden;
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  left: 0;
+  top: 0;
+
+  &__inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .elementor-heading-title {
+    transform: translateX(-20%) translateZ(0);
+    animation: marquee linear infinite 5s;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-120%) translateZ(0);
+  }
+}

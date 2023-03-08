@@ -1,0 +1,93 @@
+.elementor-lightbox {
+  &.dialog-type-lightbox {
+    z-index: 99999;
+  }
+
+  .elementor-video-container,
+  .elementor-lightbox-image {
+    border-radius: 0;
+  }
+
+  .elementor-lightbox-image {
+    box-shadow: none;
+  }
+
+  .elementor-slideshow__title {
+    font-weight: 400;
+  }
+
+  .elementor-slideshow__header {
+    i:focus {
+      outline: 0 !important;
+    }
+
+    .eicon-zoom-in-bold,
+    .eicon-share-arrow,
+    .eicon-frame-expand,
+    .eicon-frame-minimize,
+    .eicon-zoom-out-bold {
+      font-family: "neuron-icons";
+    }
+
+    .eicon-share-arrow:before {
+      content: "\e82f";
+    }
+
+    .eicon-zoom-in-bold:before,
+    .eicon-zoom-out-bold:before {
+      content: "\e83c";
+    }
+
+    .eicon-frame-minimize:before {
+      content: "\e80c";
+    }
+
+    .eicon-frame-expand:before {
+      content: "\e82a";
+    }
+  }
+
+  .elementor-swiper-button-prev {
+    justify-content: flex-start;
+    margin-left: 20px;
+
+    .eicon-chevron-left {
+      font-family: "neuron-icons";
+      transform: rotate(-180deg);
+
+      &:before {
+        content: "\e801";
+      }
+    }
+  }
+  .elementor-swiper-button-next {
+    justify-content: flex-end;
+    margin-right: 20px;
+
+    .eicon-chevron-right {
+      font-family: "neuron-icons";
+
+      &:before {
+        content: "\e801";
+      }
+    }
+  }
+
+  .dialog-lightbox-close-button {
+    margin-top: 15px;
+
+    .eicon-close {
+      font-family: "neuron-icons";
+      &:before {
+        content: "\e839";
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-lightbox .elementor-swiper-button-prev i,
+  .elementor-lightbox .elementor-swiper-button-next i {
+    background-color: transparent;
+  }
+}

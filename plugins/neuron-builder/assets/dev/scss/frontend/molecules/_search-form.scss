@@ -1,0 +1,143 @@
+.m-neuron-search-form {
+  display: block;
+  transition: 0.2s;
+
+  &__icon {
+    margin-bottom: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+
+    input {
+      display: none;
+    }
+
+    span {
+      cursor: pointer;
+      display: block;
+      color: #fff;
+      transition: color $easeInOutQuad $fast-time;
+
+      svg {
+        stroke: #858585;
+        height: 8px;
+        width: 8px;
+        transition: stroke $easeInOutQuad $fast-time;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  input {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    min-width: 0;
+    font-size: 15px;
+    flex-basis: 100%;
+
+    padding: 12px 24px;
+    background-color: #f6f6f6;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+      color: inherit;
+    }
+
+    &::-ms-input-placeholder {
+      color: inherit;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  &__submit {
+    border: none;
+    border-radius: 0;
+    background-color: #f6f6f6;
+  }
+
+  button {
+    font-size: 24px;
+    color: #000;
+    border-radius: 0;
+
+    flex-shrink: 0;
+
+    &:hover {
+      color: inherit;
+      background-color: #f6f6f6;
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+
+.m-neuron-widget,
+.widget_product_search {
+  // Search Form
+  .m-neuron-search-form {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    &__icon {
+      margin-bottom: 0;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      input {
+        display: none;
+      }
+
+      span {
+        cursor: pointer;
+        display: block;
+        color: $white;
+        transition: color $easeInOutQuad $fast-time;
+
+        &:hover {
+          color: $theme-color;
+        }
+
+        svg {
+          stroke: $grey;
+          transition: stroke $easeInOutQuad $fast-time;
+
+          &:hover {
+            stroke: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}

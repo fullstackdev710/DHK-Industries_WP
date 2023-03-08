@@ -1,0 +1,19 @@
+.neuron-element-presets {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(.loading) {
+    .neuron-element-presets__loading {
+      display: none;
+    }
+  }
+
+  .neuron-element-presets-item {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  &__loading {
+    width: 100%;
+  }
+}

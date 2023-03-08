@@ -1,0 +1,232 @@
+#elementor-theme-builder-conditions {
+  margin: 40px 0 60px;
+
+  .elementor-control {
+    background-color: transparent;
+    padding: 0;
+
+    &:before {
+      content: none;
+    }
+
+    select {
+      border-width: 0;
+      height: 40px;
+      padding: 0 14px;
+    }
+  }
+
+  .elementor-control-type-query {
+    width: 100px;
+  }
+
+  .elementor-control-type-select .elementor-control-input-wrapper:after {
+    right: 10px;
+    color: #495157;
+  }
+
+  .elementor-control-type {
+    width: 100px;
+
+    .elementor-control-input-wrapper {
+      &:after {
+        color: #fff;
+      }
+    }
+  }
+
+  .elementor-control-type[data-elementor-condition-type="include"] {
+    background-color: #39b54a;
+  }
+
+  .elementor-control-type[data-elementor-condition-type="exclude"] {
+    background-color: #d30c5c;
+  }
+
+  .elementor-control-type[data-elementor-condition-type="exclude"],
+  .elementor-control-type[data-elementor-condition-type="include"] {
+    select {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  .elementor-theme-builder-conditions-repeater-row-controls {
+    display: flex;
+    flex-grow: 1;
+    width: 70%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border-radius: 3px 0 0 3px;
+    margin-right: 1px;
+
+    .elementor-control:not(:first-child) {
+      flex-grow: 1;
+      margin-left: 1px;
+
+      select {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .elementor-control-type-select {
+    background-color: #ffffff;
+  }
+  .elementor-control-type option {
+    color: #495157;
+  }
+
+  .elementor-repeater-fields-wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+  }
+  .elementor-repeater-fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .elementor-control-field {
+    display: block;
+  }
+  .elementor-control-title,
+  .elementor-control-spinner {
+    display: none;
+  }
+  .elementor-control-input-wrapper {
+    width: 100%;
+  }
+  .select2-selection {
+    height: 40px;
+    border: none;
+    border-radius: 0;
+
+    &__rendered {
+      line-height: 40px;
+      padding-left: 15px;
+      text-align: left;
+    }
+
+    &__arrow {
+      height: 30px;
+
+      b {
+        border-top-color: #495157;
+        border-width: 4px 4px 0 4px;
+        margin-top: 2px;
+        margin-left: -7px;
+      }
+    }
+  }
+
+  .elementor-repeater-tool-remove {
+    font-size: 18px;
+    cursor: pointer;
+    color: #a4afb7;
+    height: 40px;
+    width: 44px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  .elementor-button-wrapper {
+    margin-top: 50px;
+  }
+  .elementor-repeater-add {
+    font-size: 14px;
+    padding: 12px 26px;
+    background-color: #39b54a;
+
+    &:hover {
+      background-color: #39b54a;
+    }
+  }
+}
+
+#elementor-theme-builder-conditions-view {
+  overflow: hidden;
+}
+
+.elementor-error .elementor-theme-builder-conditions-repeater-row-controls {
+  border: 1px solid rgba(176, 27, 27, 0.5);
+}
+
+.elementor-conditions-conflict-message {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #b01b1b;
+  text-align: left;
+  padding-left: 90px;
+
+  a {
+    color: inherit;
+  }
+}
+
+.elementor-panel-footer-theme-builder-buttons-wrapper {
+  .elementor-panel-footer-sub-menu {
+    display: flex;
+  }
+
+  .elementor-panel-footer-sub-menu-item {
+    display: inline-block;
+
+    i {
+      margin-right: 5px;
+    }
+
+    > * {
+      display: inline-block;
+      line-height: 40px;
+    }
+  }
+}
+
+.elementor-conditions-select2-dropdown {
+  border: none;
+  border-radius: 0;
+
+  .select2-results__message {
+    display: none;
+  }
+
+  .select2-search--dropdown {
+    .select2-search__field {
+      border-width: 0 0 1px;
+      border-radius: 0;
+    }
+  }
+}
+
+.elementor-control.elementor-control-sitemap_items.elementor-control-type-repeater {
+  .elementor-repeater-row-tools {
+    .elementor-repeater-row-item-title {
+      span {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+#neuron-publish {
+  .elementor-template-library-blank-icon img {
+    width: 45px;
+  }
+
+  .elementor-template-library-blank-title {
+    color: #6d7882;
+    line-height: 35px;
+  }
+
+  .elementor-template-library-blank-message {
+    line-height: 27px;
+    font-weight: 300;
+  }
+}
+
+.elementor-control-unit-5 {
+  max-width: 100%;
+}

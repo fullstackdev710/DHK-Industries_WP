@@ -1,0 +1,88 @@
+//==========================
+//        Columns Mixin
+//==========================
+
+@mixin neuron-columns($type) {
+  &--columns {
+    &__0 {
+      .l-neuron-grid__item {
+        width: auto;
+      }
+    }
+
+    &__1 {
+      .l-neuron-grid__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__2 {
+      .l-neuron-grid__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    &__3 {
+      .l-neuron-grid__item {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+      }
+    }
+
+    &__4 {
+      .l-neuron-grid__item {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+
+    &__5 {
+      .l-neuron-grid__item {
+        flex: 0 0 20%;
+        max-width: 20%;
+      }
+    }
+
+    &__6 {
+      .l-neuron-grid__item {
+        flex: 0 0 16.6666667%;
+        max-width: 16.6666667%;
+      }
+    }
+  }
+}
+
+@mixin neuron-offset-spacing() {
+  &--offset-yes {
+    &.l-neuron-grid-wrapper--columns__2 {
+      .l-neuron-grid__item:nth-child(2) {
+        margin-top: rem(60px);
+      }
+    }
+
+    &.l-neuron-grid-wrapper--columns__3,
+    &.l-neuron-grid-wrapper--columns__4 {
+      .l-neuron-grid__item:nth-child(1) {
+        margin-top: rem(60px);
+      }
+      .l-neuron-grid__item:nth-child(3) {
+        margin-top: rem(60px);
+      }
+    }
+
+    &.l-neuron-grid-wrapper--columns__5,
+    &.l-neuron-grid-wrapper--columns__6 {
+      .l-neuron-grid__item:nth-child(1) {
+        margin-top: rem(60px);
+      }
+      .l-neuron-grid__item:nth-child(3) {
+        margin-top: rem(60px);
+      }
+      .l-neuron-grid__item:nth-child(5) {
+        margin-top: rem(60px);
+      }
+    }
+  }
+}

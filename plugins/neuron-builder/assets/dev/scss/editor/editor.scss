@@ -1,0 +1,90 @@
+//====================
+//     Editor SCSS
+//====================
+
+/*====================
+
+- Vendor
+- Atoms
+- Molecules
+
+==================*/
+
+@import "n-icons";
+
+#elementor-panel-get-pro-elements,
+#elementor-notice-bar,
+.elementor-tags-list__teaser,
+.elementor-control-content_order .elementor-repeater-row-controls,
+.elementor-control-content_order_image .elementor-repeater-row-controls {
+  display: none !important;
+}
+
+// Neuron Badge
+#elementor-panel-elements-wrapper
+  .elementor-element
+  .icon
+  i.neuron-badge:after {
+  content: "\e83d";
+  font-family: "neuron-icons";
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.compat-attachment-fields .label {
+  margin-right: 0 !important;
+}
+
+.elementor-control-neuron_left_arrow_alignment,
+.elementor-control-neuron_right_arrow_alignment,
+.elementor-control-neuron_left_arrow_alignment_tablet,
+.elementor-control-neuron_right_arrow_alignment_tablet,
+.elementor-control-neuron_left_arrow_alignment_mobile,
+.elementor-control-neuron_right_arrow_alignment_mobile,
+.elementor-control-neuron_dots_alignment,
+.elementor-control-neuron_dots_alignment_tablet,
+.elementor-control-neuron_dots_alignment_mobile {
+  .elementor-choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    height: 42px;
+    border-radius: 0 !important;
+  }
+
+  label:not(.elementor-control-title) {
+    border-radius: 0 !important;
+    border-right: 1px solid #d5dadf !important;
+    width: 14px;
+  }
+}
+
+// Animations
+.select2-results {
+  &__option {
+    &[aria-label="Zooming"],
+    &[aria-label="Bouncing"],
+    &[aria-label="Rotating"],
+    &[aria-label="Attention Seekers"],
+    &[aria-label="Light Speed"],
+    &[aria-label="Specials"] {
+      display: none;
+    }
+  }
+}
+
+#elementor-icons-manager__upload {
+  display: none !important;
+}
+
+.neuron-reset-metro {
+  padding: 3px 8px;
+}
+
+@import "publish", "theme-builder", "popup", "presets", "global", "metro",
+  "dark";

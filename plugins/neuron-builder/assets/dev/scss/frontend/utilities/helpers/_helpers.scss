@@ -1,0 +1,40 @@
+//=======================
+//        Helpers
+//=======================
+
+@import "offsets";
+
+@import "animations";
+
+@import "sizes";
+
+@import "theme-builder";
+
+@import "motion-effects";
+
+#wp-admin-bar-elementor_edit_page:hover .ab-sub-wrapper {
+  display: block;
+}
+
+.elementor-editor-active {
+  .elementor-element.elementor-global-widget.elementor-element-edit-mode {
+    // TODO: Check for a better solution ($settings in render() are not working)
+    // .elementor-widget-container > * {
+    //   display: none;
+    // }
+  }
+
+  .elementor.elementor-edit-mode
+    .elementor-widget.elementor-global-widget:hover {
+    outline: 1px solid #fec449;
+  }
+}
+
+// General Helpers
+.h-neuron-form-spinner {
+  margin-left: 8px;
+}
+
+#wpadminbar {
+  z-index: 100000;
+}
